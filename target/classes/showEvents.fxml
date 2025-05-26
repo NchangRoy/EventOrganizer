@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="526.0" prefWidth="890.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.Controllers.showEventsController">
+   <children>
+      <TableView fx:id="eventTable" layoutX="52.0" layoutY="80.0" prefHeight="297.0" prefWidth="787.0">
+        <columns>
+          <TableColumn fx:id="eventID" prefWidth="94.0" text="id" />
+          <TableColumn fx:id="eventName" prefWidth="189.0" text="Name" />
+            <TableColumn fx:id="eventDate" prefWidth="143.0" text="Data" />
+            <TableColumn fx:id="eventCapacite" prefWidth="141.0" text="CapaciteMax" />
+            <TableColumn fx:id="eventType" prefWidth="141.0" text="Type" />
+        </columns>
+      </TableView>
+      <Button layoutX="343.0" layoutY="407.0" mnemonicParsing="false" onAction="#selectEvent" prefHeight="47.0" prefWidth="204.0" text="Select Event" />
+      <Label layoutX="301.0" layoutY="44.0" prefHeight="32.0" prefWidth="289.0" text="Select the event you wish to work with" />
+      <Button layoutX="21.0" layoutY="32.0" mnemonicParsing="false" onAction="#goBack" text="Back" />
+   </children>
+</AnchorPane>
