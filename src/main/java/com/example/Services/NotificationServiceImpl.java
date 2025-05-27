@@ -13,8 +13,8 @@ import javax.mail.internet.MimeMessage;
 import java.util.concurrent.CompletableFuture;
 public class NotificationServiceImpl implements NotificationService{
     
-    String password="ncmw toxd xbvf arxy";
-    String email="furehmitoto@gmail.com";
+    String password="set google app password";
+    String email="setemail@gmail.com";
     public CompletableFuture<Void> future=new CompletableFuture<>();
     public NotificationServiceImpl(String email,String password){
         this.email=email;
