@@ -1,1 +1,1 @@
-{"id":"E001","nom":"Music Festival","date":[2025,8,20],"capaciteMax":2,"participants":[{"id":"P001","nom":"Alice","email":"furehmitoto@gmail.com"},{"id":"P002","nom":"Bob","email":"furehmitoto@gmail.com"}]}
+{"evenements":[{"type":"conference","id":"asd","nom":"asda","date":[2025,5,9],"capaciteMax":12,"participants":[],"theme":"dwasf","intervenants":[]}],"events":[{"type":"conference","id":"asd","nom":"asda","date":[2025,5,9],"capaciteMax":12,"participants":[],"theme":"dwasf","intervenants":[]}]}

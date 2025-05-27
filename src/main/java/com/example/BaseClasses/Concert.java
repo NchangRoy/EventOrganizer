@@ -11,6 +11,9 @@ public class Concert extends Event{
         this.artiste=artiste;
         this.genreMusical=genreMusical;
     }
+    public Concert(){
+        
+    }
     public String getArtiste() {
         return artiste;
     }

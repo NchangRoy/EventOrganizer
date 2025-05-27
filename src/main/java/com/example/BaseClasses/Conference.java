@@ -7,11 +7,14 @@ import java.util.List;
 
 public class Conference extends Event{
     private String theme;
-    private  List<Intervenant> intervenants;
+    private  List<Intervenant> intervenants=new ArrayList<>();;
     public Conference(String id, String nom, LocalDate date, int capaciteMax,String theme){
         super(id, nom, date, capaciteMax);
         this.theme=theme;
-        intervenants=new ArrayList<>();
+        
+    }
+    public Conference(){
+
     }
     public void ajouterIntervenant(Intervenant intervenant){
         intervenants.add(intervenant);

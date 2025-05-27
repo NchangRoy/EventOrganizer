@@ -47,6 +47,71 @@
             <artifactId>javafx-fxml</artifactId>
             <version>${javafx.version}</version>
         </dependency>
+        <!--Junit dep-->
+          <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter</artifactId>
+        <version>5.10.2</version>
+        <scope>test</scope>
+    </dependency>
+    <!-- Mockito-->
+     <dependency>
+    <groupId>org.mockito</groupId>
+    <artifactId>mockito-core</artifactId>
+    <version>5.16.1</version>
+    <scope>test</scope>
+</dependency>
+    <dependency>
+    <groupId>net.bytebuddy</groupId>
+    <artifactId>byte-buddy</artifactId>
+    <version>1.15.11</version>
+</dependency>
+
+    <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>4.13.2</version> <!-- Latest version -->
+        <scope>test</scope>
+    </dependency>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>5.10.0</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Mockito -->
+        
+
+
+    <dependency>
+    <groupId>net.bytebuddy</groupId>
+    <artifactId>byte-buddy-agent</artifactId>
+    <version>1.15.11</version>
+</dependency>
+    <dependency>
+        <groupId>org.objenesis</groupId>
+        <artifactId>objenesis</artifactId>
+        <version>3.3</version>
+        <scope>test</scope>
+    </dependency>
+
+
+   
+		 <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-api</artifactId>
+        <version>5.8.2</version> <!-- You can use the latest version -->
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-engine</artifactId>
+        <version>5.8.2</version> <!-- Ensure to use the same version -->
+        <scope>test</scope>
+    </dependency>
+	
 
     </dependencies>
 
@@ -91,6 +156,12 @@
         </execution>
     </executions>
 </plugin>
+
+<plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.2.5</version>
+        </plugin>
     </plugins>
 
 

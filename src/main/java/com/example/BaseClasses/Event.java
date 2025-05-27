@@ -5,6 +5,20 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.lang.Exception;
+
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
+import com.fasterxml.jackson.annotation.JsonSubTypes;
+
+@JsonTypeInfo(
+  use = JsonTypeInfo.Id.NAME,   // Use a property to determine subtype
+  include = JsonTypeInfo.As.PROPERTY,
+  property = "type"             // The JSON field that tells which subclass to use
+)
+@JsonSubTypes({
+  @JsonSubTypes.Type(value = Concert.class, name = "concert"),
+  @JsonSubTypes.Type(value = Conference.class, name = "conference")
+  // Add all subclasses here with their JSON "type" names
+})
 public class Event   {
     private String id;
     private String nom;

@@ -106,9 +106,10 @@ public class eventOptions {
 
     @FXML
     void sendNotifications(ActionEvent event) {
+        CompletableFuture<Void> future=new CompletableFuture<>();
         NotificationService notificationService=(NotificationService)new NotificationServiceImpl();
         for(Participant p: this.event.getParticipants()){
-            CompletableFuture<Void> future=new CompletableFuture<>();
+           
             future.runAsync(()->{
                 String body=String.format(""" 
                 Hello %s,
@@ -121,7 +122,9 @@ public class eventOptions {
                 notificationService.envoyerNotification("Event Notification", body, p.getEmail());
             
             });
+            
         }
+       
         alertLabel.setText("Notification delivered to all Participants");
     }
     @FXML

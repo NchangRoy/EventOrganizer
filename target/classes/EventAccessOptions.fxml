@@ -3,10 +3,10 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="559.0" prefWidth="817.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.Controllers.EventAccessOptionController">
    <children>
       <Button layoutX="354.0" layoutY="213.0" mnemonicParsing="false" onAction="#View_Events" prefHeight="51.0" prefWidth="109.0" text="View Events" />
       <Button layoutX="354.0" layoutY="295.0" mnemonicParsing="false" onAction="#Create_Events" prefHeight="51.0" prefWidth="109.0" text="Create Event" />
+      <Button layoutX="354.0" layoutY="144.0" mnemonicParsing="false" onAction="#Save" prefHeight="51.0" prefWidth="109.0" text="Save" />
    </children>
 </AnchorPane>

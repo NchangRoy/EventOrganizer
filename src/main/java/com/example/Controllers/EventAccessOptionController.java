@@ -1,5 +1,6 @@
 package com.example.Controllers;
 
+import java.io.File;
 import java.time.LocalDate;
 
 import com.example.BaseClasses.Concert;
@@ -12,6 +13,8 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
 public class EventAccessOptionController {
     GestionEvenement gestionEvenement=GestionEvenement.getGestionEvenement();
@@ -47,8 +50,10 @@ public class EventAccessOptionController {
         Parent root=loader.load();
         Scene scene=new Scene(root);
         Stage stage=new Stage();
-        showEventsController SEC=loader.getController();
-        SEC.fillTable();
+        showEventsController controller=loader.getController();
+        Scene currentScene=((Node)event.getSource()).getScene();
+        controller.initialize(currentScene);
+       controller.fillTable();
         stage.setScene(scene);
         stage.setTitle("View Event");
         stage.show();
@@ -62,10 +67,26 @@ public class EventAccessOptionController {
        }
         
     }
+    @FXML
+    void Save(ActionEvent event){
+        ObjectMapper mapper=new ObjectMapper();
+        //add module to serialize Localdate
+        mapper.registerModule(new JavaTimeModule());
+         File file=new File("src/main/java/com/example/SavedJsonFiles/save.json");
+         try {
+            mapper.writeValue(file,GestionEvenement.getGestionEvenement());
+         } catch (Exception e) {
+           e.printStackTrace();
+         }
+    }
 
     public void initialize(GestionEvenement gestionEvenement){
         
-        
+        this.gestionEvenement=gestionEvenement;
+        GestionEvenement gestionEvenement2=GestionEvenement.getGestionEvenement();
+        if(gestionEvenement.equals(gestionEvenement2)){
+            System.out.println("Same instance");
+        }
     }
 
 }

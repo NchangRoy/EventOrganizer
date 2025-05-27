@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "EventRegistrySerialization",
+            "request": "launch",
+            "mainClass": "EventRegistrySerialization",
+            "projectName": "tp3"
+        },
+        {
+            "type": "java",
             "name": "TestGestionEvenement",
             "request": "launch",
             "mainClass": "TestGestionEvenement",
